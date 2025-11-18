@@ -477,8 +477,7 @@ def main():
     dp.add_handler(CommandHandler("add", add_balance))
     dp.add_handler(CommandHandler("remove", remove_balance))
 
-    updater.start_webhook(listen="0.0.0.0", port=8080, url_path="8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM")
-    updater.bot.set_webhook(url="https://asataxi.fly.dev/8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM")
+   
 
 if __name__ == '__main__':
     main()
