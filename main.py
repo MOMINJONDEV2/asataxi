@@ -478,9 +478,6 @@ def main():
     dp.add_handler(CommandHandler("remove", remove_balance))
 
    
-
-if __name__ == '__main__':
-    main()
 def main():
     start_keep_alive()  # Uyquga ketmaslik funksiyasini chaqirish
     init_db()
@@ -489,7 +486,13 @@ def main():
 
     # ... barcha handlerlar ...
 
-    updater.start_webhook(listen="0.0.0.0", port=8080, url_path="8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM")
+    # Webhook qismi
+    updater.start_webhook(
+        listen="0.0.0.0",  # To'g'ri manzil
+        port=8080,         # To'g'ri port
+        url_path="8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM",  # Token o'rniga
+        webhook_url="https://asataxi.fly.dev/8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM"  # URL o'rniga
+    )
     updater.bot.set_webhook(url="https://asataxi.fly.dev/8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM")
 
 if __name__ == '__main__':
