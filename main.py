@@ -482,3 +482,16 @@ def main():
 
 if __name__ == '__main__':
     main()
+def main():
+    start_keep_alive()  # Uyquga ketmaslik funksiyasini chaqirish
+    init_db()
+    updater = Updater("8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM", use_context=True)
+    dp = updater.dispatcher
+
+    # ... barcha handlerlar ...
+
+    updater.start_webhook(listen="0.0.0.0", port=8080, url_path="8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM")
+    updater.bot.set_webhook(url="https://asataxi.fly.dev/8434009950:AAEHGZeAO_ToBylEwGG93pMZF2-09gmnTtM")
+
+if __name__ == '__main__':
+    main()
